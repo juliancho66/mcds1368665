@@ -1,0 +1,20 @@
+doctype
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		title Document
+	body
+		h1 Javascript
+		hr
+		h2#respuesta
+		script.
+			var res=document.getElementById('respuesta');
+			var pre=prompt('cuanto es 5+6?');
+			if(pre== 11){
+				res.innerHTML='respuesta correcta';
+			}else{
+			    res.innerHTML='respuesta Incorrecta';
+			}
+
+
+	
