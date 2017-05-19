@@ -1,0 +1,35 @@
+doctype
+html(lang='es')
+	head
+		meta(charset='UTF-8')
+		title Atributos
+	body
+	//Atributos en linea
+	a(class="button" href="google.com" target="_blank") google
+	//Atributos en bloque
+	input(
+		type= "checkbox"
+		name="agreement"
+		cheked
+	)
+	br
+	br
+	br
+	//Atributos Booleanos
+	label
+		input(type="radio" name="color" checked=false)
+		| Amarillo
+	label
+		input(type="radio" name="color" checked=true)
+		| Azul
+	label
+		input(type="radio" name="color" cheked=false)           
+	| Rojo
+	//Estilos de los atributos
+	br
+	a(style={color: 'red', background: 'green'}) Enlace
+	br
+	- var clases = ['yellow', 'blue', 'red']
+	a(class=clases) Enlace
+	
+
