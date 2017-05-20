@@ -1,19 +1,20 @@
 doctype
 html(lang='es')
 	head
-		meta(charset='UTF-8')
-		title Casos
+		meta
+		title
 	body
-
-		//1
-		- var friends = 2
-		case friends
-			when 0: p no tiene amigos
-			when 1: p no tiene amigos
-			when 2: p tiene #{friends} amigos 
-			default: p tiene #{friends} friends
-
-		
-
-
-
+		h1 casos
+		hr
+		ul
+			-var goles = 40
+			case goles
+				when 0
+					li 
+						strong no tiene goles
+				when 1
+					li tiene 1 o 2 goles
+				when 2
+					li tiene 1 o 2 goles en contra
+				default
+					li tiene #{goles} goles en contra

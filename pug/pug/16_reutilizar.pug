@@ -1,0 +1,27 @@
+doctype
+html(lang='es')
+	head
+		meta(charset='UTF-8')
+		title Reutilizar Codigo
+	body
+		h1 Reutilizar Codigo
+		hr
+		mixin frutas(fruta)
+			li.fruta=fruta
+		ol
+			+frutas('papaya')
+			+frutas('piña')
+			+frutas('sandia')
+			+frutas('guayaba')
+			+frutas('pera')
+
+		mixin menu
+			menu
+				ul
+					li opcion 1
+					li opcion 2
+					li opcion 3
+					li opcion 4
+					li opcion 5
+
+		+menu

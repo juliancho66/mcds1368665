@@ -2,9 +2,19 @@ doctype
 html(lang='es')
 	head
 		meta(charset='UTF-8')
-		title Codigo ciclos
+		title Codigo
 	body
-	//ciclo for 1
-	-for(var i=0;i<10;i++)
-		li item
+		h1 codigo
+		hr
+		//- sin bufer
+		menu
+			ul
+			- for(var i= 1;i <= 20;i++)
+				li elemento #{li}
+		//- Con bufer
+		- var contenido='<strong> Lorem ipsum dolor </strong><em>sit.</em>'
+		p=contenido
+		br
+		p!=contenido
+
 

@@ -4,14 +4,15 @@ html(lang='es')
 		meta(charset='UTF-8')
 		title Condicionales
 	body
-	//condicionales
-	-var autorizacion=false
-	-var usuario={descripcion: 'Lorem ipsum dolor'}
-	article#user
-		if autorizacion
-			h2.green Descripcion
-			p.descripcion=usuario.descripcion
-		else
-			h2.red Descripcion
-			p.descripcion no hay informacion
-
+		h1 Condicionales
+		hr
+		-var edad = 22
+		-var persona = {alto: 180, peso: 120 , genero:'femenino'}
+		article
+			if (edad >= 18)
+				h2 usted puede votar
+				p='genero: '+persona.genero
+				p='peso: '+persona.peso
+				p='altura: '+persona.alto	
+			else
+				h2 usted no puede votar
