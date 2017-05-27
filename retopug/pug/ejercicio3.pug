@@ -1,0 +1,58 @@
+extends includes/head.pug
+block title
+	title Vitality
+	body
+		mixin demo-header(tit,par,enl1,enl2)
+			div.demo-header
+				div.demo-header-content
+					div.container
+						h1=tit
+						hr.colored
+						p=par
+						ul.list-inline.cta-list
+							li.list-inline-item
+								a(href='#previews' class="btn btn-primary page-scroll-demo")=enl1
+							li.list-inline-item
+								a(href='docs/index.html' class="btn btn-primary page-scroll-demo")=enl2
+
+		mixin opciones(tit,enl1,enl2,enl3,img)
+			div
+				div
+					a(href='#')
+						img(class='img-fluid mx-auto mb-4' src=img alt='')
+						h3=tit
+						hr.colored
+						p.text-muted Ideal For:
+						if(tit != 'video')
+							ul
+								li
+									em=enl1
+								li
+									em=enl2
+								li
+									em=enl3
+						else
+							em=enl1
+							
+
+		-var titulo='Welcome to Vitality!'
+		-var parrafo='All of the sample layouts are included with your download. Select an example layout below to preview!'
+		-var enlace1='View Demos'
+		-var enlace2='Documentation'
+
+		+demo-header(titulo,parrafo,enlace1,enlace2)
+		
+		+opciones('Agency','Agencies','Businesses','Consultants','img/demo/screenshot1.png')
+		+opciones('Creative','Personal Portfolios','Freelancers','Photographers','img/demo/screenshot2.png')
+		+opciones('Culinary','Restaurants','Bakeries','Caterers','img/demo/screenshot3.png')
+		+opciones('Fashion','Boutiques','Designers','Retail Stores','img/demo/screenshot4.png" class="img-fluid mx-auto mb-4')
+		+opciones('Legal','Lawyers','Law Firms','Consultants','img/demo/screenshot7.png" class="img-fluid mx-auto mb-4')
+		+opciones('video','An example of the agency theme with a video background for the header. A video background can be applied to any other theme!','','','img/demo/screenshot6.png')
+
+		//- array
+	
+  		
+
+
+		
+			

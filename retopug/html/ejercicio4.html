@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4 </title>
+  </head>
+  <body>
+    <h1>Ejercicio 4</h1>
+    <hr>
+    <h2 id="respuesta"></h2>
+    <script>
+      var res=document.getElementById('respuesta');
+      var gen=prompt('Genero');
+      var eda=prompt('Edad');
+      if(eda >= 18 && gen=='masculino'){
+      	res.innerHTML='Puede ir a la guerra';
+      }else{
+          res.innerHTML='No puede ir a la guerra';
+      }
+    </script>
+  </body>
+</html>

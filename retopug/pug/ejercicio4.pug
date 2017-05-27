@@ -1,0 +1,26 @@
+doctype
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		title Ejercicio 4 
+	body
+		h1 Ejercicio 4
+		//-
+			Escribir	el	código	PUG (usando condicionales) para	determinar	si	el	usuario	es	mayor	de	edad y	su	
+			genero	es	masculino,	 si	 cumple	ambas	 condiciones	 puede	 ir	a	 la	guerra,	al	 contrario	 si	es	menor	 de	
+			edad	no	importa su	genero	no	va	a	la	guerra,	tampoco	puede	ir	a	la	guerra si	es	mayor	de	edad	y	su	
+			genero	es	femenino.
+		hr
+		h2#respuesta
+		script.
+			var res=document.getElementById('respuesta');
+			var gen=prompt('Genero');
+			var eda=prompt('Edad');
+			if(eda >= 18 && gen=='masculino'){
+				res.innerHTML='Puede ir a la guerra';
+			}else{
+			    res.innerHTML='No puede ir a la guerra';
+			}
+
+
+	

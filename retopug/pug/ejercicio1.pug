@@ -1,0 +1,31 @@
+doctype
+html(lang="es")
+	head
+		meta(charset='UTF-8')
+		title Ejercicio 1
+		style.
+			table{
+				width: 600px;
+				border-collapse: collapse;
+			}			
+	body
+		h1 Ejercicio 1
+		- var con = 9
+		table(align= 'center' border='1')
+			- for(var f= 1;f <= 10;f++)
+				tr
+					- for(var c= 1;c <= 12;c++)
+						if(f==1 && c ==11 ||  f==1 && c ==12)
+							td(rowspan='10' bgcolor='#BCB6B6' width='40' height='40')
+						else
+							if ( c == 11 || c==12)
+								//
+							else
+								if (f >= c)
+									td(bgcolor='#BCB6B6' width='40' height='40')
+								else
+									td(colspan=con)
+									-c = 10
+					-con--
+
+

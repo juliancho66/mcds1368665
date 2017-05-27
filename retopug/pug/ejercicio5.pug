@@ -1,0 +1,28 @@
+doctype
+html(lang="es")
+	head
+		meta(charset='UTF-8')
+		title Ejecicio 5	
+		style.
+			select{
+				position:absolute; left:200px; top:80px;
+				width: 600px;
+			}	
+	body
+		h1 Ejercicio 5
+		//-
+			Escribir	el	código	PUG (usando ciclos) para	imprimir un	select	 (lista	desplegable de	30	opciones),
+			que	solo	 imprima	 las	 opciones	 que	son múltiplo 	de	 3 amarillas,	 las	 opciones	 que	 son	múltiplo de	 4
+			azules	y	por	último las	que	son	múltiplos de	5 rojas.		
+		select
+			option Multiplos:  3= amarillos  4= azules  5= rojos
+			- for(var i= 1;i <= 30;i++)
+				- var mul3 = i%3
+				- var mul4 = i%4
+				- var mul5 = i%5
+				if (mul3 == 0)
+					option(style='background-color: yellow') #{i}
+				if (mul4 == 0)
+					option(style='background-color: blue') #{i}
+				if (mul5 == 0)
+					option(style='background-color: red') #{i}

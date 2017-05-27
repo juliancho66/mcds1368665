@@ -1,0 +1,29 @@
+doctype
+html(lang="es")
+	head
+		meta(charset='UTF-8')
+		title Ejecicio 2
+		style.
+			li{
+				width: 600px;
+				height: 30px;
+				list-style-type:none;
+				margin:2px;				
+			}
+			div{
+				position:absolute; left:200px; top:80px;
+			}
+	body
+		h1 Ejercicio 2
+		-var n = 0
+		-var azul =250
+		div
+			ul
+			while n < 10
+				li(style="background-color: rgb("+azul+", 250, 250)")
+				-azul-=20
+				-n++
+
+
+
+
