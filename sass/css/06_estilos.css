@@ -1,0 +1,21 @@
+/* variables de colores */
+@import url("https://fonts.googleapis.com/css?family=Pathway+Gothic+One");
+:root {
+  background: -webkit-linear-gradient(top, #050B5D, #E7E6F3);
+  height: 100vh; }
+
+button {
+  display: block;
+  margin: 80px auto;
+  padding: 40px;
+  width: 400px;
+  border: none;
+  background: -webkit-linear-gradient(left, #BB4747, #3C0202);
+  color: #fff;
+  font-size: 2em;
+  font-family: "Pathway Gothic One";
+  -webkit-box-shadow: -4px -4px 12px rgba(255, 255, 255, 0.8), 4px 4px 12px rgba(0, 0, 0, 0.8);
+  box-shadow: -4px -4px 12px rgba(255, 255, 255, 0.8), 4px 4px 12px rgba(0, 0, 0, 0.8); }
+  button:hover {
+    cursor: pointer;
+    background: -webkit-linear-gradient(right, #BB4747, #3C0202); }
