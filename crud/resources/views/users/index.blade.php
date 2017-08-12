@@ -1,0 +1,67 @@
+@extends('layouts.app')
+@section ('title', 'lista de usuarios')
+@section('content')
+
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+		<br>
+		<a href="{{ url ('departments')}}" class="btn btn-default">
+			<i class="fa fa-list"></i> Ejemplo de lista desplegable
+		</a>
+			<h1 class="lead">lista de usuarios </h1>
+			@if(session('status'))
+				<div class="alert alert-success">
+					<ul>
+							<li> {{session('status')}}</li>
+					</ul>
+				</div>
+			@endif
+			<hr>
+			<a class= "btn btn-success" href="{{url('user/create')}}"> <i class ="fa fa-plus"> </i> adicionar usuarios</a>
+			<br><br>
+			<strong>Numero de usuarios:</strong>
+			<span class="badge">{{ $users->count() }}</span>
+			<br>
+			<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Correo Electronico</th>
+					<th>Rol</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+			@foreach($users as $user)
+				<tr>
+					<td>{{ $user->name }} </td>
+					<td>{{ $user->email }} </td>
+					<td>{{ $user->role }} </td>
+					<td>
+						<a href="{{url('user/'.$user->id)}}" class="btn btn-info btn-lg ">
+						<i class ="fa fa-search"></i>
+						</a>
+						<a href="{{url('user/'.$user->id.'/edit')}}" class="btn btn-info btn-lg ">
+						<i class ="fa fa-pencil-square-o"> </i> 
+						</a>   
+
+						<form action="{{url('user/'.$user->id)}}" method="POST" style="display: inline">      
+						
+						{{csrf_field()}}
+				        {{method_field('DELETE') }}					
+							<button type="button" class="btn btn-danger btn-delete btn-lg" >
+								<i class ="fa fa-trash"> </i>
+							</button>
+
+						</form> 
+
+					</td>
+				</tr>
+			@endforeach
+			</tbody>
+
+			</table>
+		</div>
+	</div>
+	@endsection
+
