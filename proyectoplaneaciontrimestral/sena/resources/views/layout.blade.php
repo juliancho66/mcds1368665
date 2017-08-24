@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="page-header text-center">
-                        Programacion Trimestral 
+                        Programacion Trimestral
                         <a class="navbar-brand" href="{{ url('home') }}">
                             <i aria-hidden="true" class="fa fa-home fa-2x ">
                             </i>
